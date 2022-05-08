@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 05/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/dimen8"
+        app:cardCornerRadius="@dimen/dimen10"
+        android:elevation="@dimen/dimen10">
+
+    <ImageView
+        android:id="@+id/image_daily"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen200" />
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen200"
+        android:background="@drawable/shadow_list"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/dimen20"
+            style="@style/TitleImageStyle" />
+
+        <TextView
+            android:id="@+id/desc_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen30"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginEnd="@dimen/dimen50"
+            android:layout_marginRight="@dimen/dimen50"
+            style="@style/DescImageStyle" />
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

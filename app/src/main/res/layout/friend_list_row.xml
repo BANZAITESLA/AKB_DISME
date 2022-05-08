@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 06/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frameLayoutFriend"
+        android:layout_width="@dimen/dimen300"
+        android:layout_height="@dimen/dimen150"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/dimen24"
+        android:layout_marginRight="@dimen/dimen20"
+        app:cardCornerRadius="@dimen/dimen10"
+        android:elevation="@dimen/dimen10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/dimen18"
+            android:paddingStart="@dimen/dimen18">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_friend"
+                android:layout_width="@dimen/dimen100"
+                android:layout_height="@dimen/dimen100"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toRightOf="@id/image_friend">
+
+                <TextView
+                    android:id="@+id/name_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+
+                    style="@style/NameFriendStyle" />
+
+                <TextView
+                    android:id="@+id/username_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+
+                    style="@style/UsernameFriendStyle" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 08/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dimen18"
+    android:layout_marginRight="@dimen/dimen18"
+    android:layout_marginEnd="@dimen/dimen18"
+    android:layout_marginLeft="@dimen/dimen18"
+    android:layout_marginStart="@dimen/dimen18"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_profile"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen20">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/dimen100"
+                android:layout_height="@dimen/dimen100"
+                android:src="@drawable/img_profile" />
+
+            <TextView
+                style="@style/TitleImageStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dea" />
+
+            <TextView
+                style="@style/DescProfileStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen20"
+                android:layout_marginLeft="@dimen/dimen20"
+                android:layout_marginTop="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen20"
+                android:layout_marginRight="@dimen/dimen20"
+                android:gravity="center"
+                android:text="@string/desc_dea" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button_call"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+                    android:background="@drawable/shape_round"
+                    android:elevation="@dimen/dimen5"
+                    android:src="@drawable/ic_call" />
+
+                <ImageButton
+                    android:id="@+id/button_mail"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+                    android:background="@drawable/shape_round"
+                    android:elevation="@dimen/dimen5"
+                    android:src="@drawable/ic_mail" />
+
+                <ImageButton
+                    android:id="@+id/button_link"
+                    android:layout_width="@dimen/dimen40"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+                    android:background="@drawable/shape_round"
+                    android:elevation="@dimen/dimen5"
+                    android:src="@drawable/ic_github" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/maps_profile_layout"
+            android:layout_below="@id/top_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen200"
+            app:cardCornerRadius="@dimen/dimen20"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen10"
+            android:background="@drawable/shape_bg_profile">
+
+            <Button
+                android:id="@+id/button_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_button" />
+
+            <com.mapbox.mapboxsdk.maps.MapView
+                xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                mapbox:mapbox_cameraTargetLat="-6.755484"
+                mapbox:mapbox_cameraTargetLng="107.010402"
+                mapbox:mapbox_cameraZoom="10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen10">
+
+                <TextView
+                    style="@style/DescProfileStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_title"
+                    android:drawableLeft="@drawable/ic_house_profile"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dimen10"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:paddingTop="@dimen/dimen5"
+                    android:paddingEnd="@dimen/dimen10"
+                    android:paddingRight="@dimen/dimen10"
+                    android:paddingBottom="@dimen/dimen5"
+                    android:text="@string/find_me" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maps_profile_layout"
+            android:layout_marginTop="@dimen/dimen10"
+            android:padding="@dimen/dimen20"
+            android:gravity="center"
+            android:text="@string/version"
+            style="@style/VersionStyle"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_bg_profile"/>
+
+    </RelativeLayout>
+</FrameLayout>

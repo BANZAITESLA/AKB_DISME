@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 06/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frameLayoutMusic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen100"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/dimen8"
+        app:cardCornerRadius="@dimen/dimen10"
+        android:elevation="@dimen/dimen10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen18"
+            android:paddingStart="@dimen/dimen18"
+            android:background="#A6091503">
+
+            <Button
+                android:id="@+id/play_button_music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"/>
+
+            <RelativeLayout
+                android:id="@+id/image_layout"
+                android:layout_width="@dimen/dimen76"
+                android:layout_height="@dimen/dimen76"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/image_music"
+                    android:layout_width="@dimen/dimen76"
+                    android:layout_height="@dimen/dimen76" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shadow_media"/>
+
+                <View
+                    android:id="@+id/play_icon_music"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="@dimen/dimen50"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_play"
+                    android:backgroundTint="#A6FFFFFF" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_toRightOf="@id/image_layout">
+
+                <TextView
+                    android:id="@+id/title_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+
+                    style="@style/DescImageStyle" />
+
+                <TextView
+                    android:id="@+id/author_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+
+                    style="@style/AuthorMusicStyle" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

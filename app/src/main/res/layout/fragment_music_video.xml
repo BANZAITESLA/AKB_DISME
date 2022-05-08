@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 06/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicVideoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen18"
+        android:layout_marginBottom="@dimen/dimen80"
+        android:paddingStart="@dimen/dimen18"
+        android:paddingLeft="@dimen/dimen18"
+        android:paddingRight="@dimen/dimen18"
+        android:paddingEnd="@dimen/dimen18">
+
+        <TextView
+            android:id="@+id/title_video"
+            style="@style/TitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/video_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_video"/>
+
+        <TextView
+            android:id="@+id/title_music"
+            style="@style/TitleStyle"
+            android:layout_below="@id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen18"
+            android:text="@string/music_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_view_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_music" />
+    </RelativeLayout>
+
+</FrameLayout>

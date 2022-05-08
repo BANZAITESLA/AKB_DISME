@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 08/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_marginBottom="@dimen/dimen10"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dimen10"
+            android:background="#A6091503">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_interest"
+                android:layout_width="@dimen/dimen48"
+                android:layout_height="@dimen/dimen48"
+                android:src="@drawable/img_profile"/>
+
+            <RelativeLayout
+                android:id="@+id/right_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/circle_interest"
+                android:paddingStart="@dimen/dimen10"
+                android:paddingLeft="@dimen/dimen10">
+
+                <TextView
+                    android:id="@+id/name_interest"
+                    style="@style/NameHomeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_home_title"
+                    android:drawablePadding="@dimen/dimen5"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dimen10"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:paddingTop="@dimen/dimen5"
+                    android:paddingEnd="@dimen/dimen10"
+                    android:paddingRight="@dimen/dimen10"
+                    android:paddingBottom="@dimen/dimen5" />
+
+                <TextView
+                    android:id="@+id/desc_interest"
+                    style="@style/DescHomeStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_interest"
+                    android:paddingStart="@dimen/dimen10"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:paddingTop="@dimen/dimen5" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/desc_interest"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_marginTop="@dimen/dimen5"
+                    app:cardCornerRadius="@dimen/dimen10">
+
+                    <ImageView
+                        android:id="@+id/image_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen150"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 08/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="400"
+    android:interpolator="@android:anim/decelerate_interpolator"
+    android:fromAlpha="0"
+    android:toAlpha="1" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 04/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_daily"
+        android:icon="@drawable/ic_daily_activity"
+        android:title="@string/daily_activity" />
+
+    <item
+        android:id="@+id/menu_gallery"
+        android:icon="@drawable/ic_gallery"
+        android:title="@string/gallery" />
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_house_solid"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/menu_music_video"
+        android:icon="@drawable/ic_music_video"
+        android:title="@string/music_video" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_user_solid"
+        android:title="@string/profile" />
+</menu>
+

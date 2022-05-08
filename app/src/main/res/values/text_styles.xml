@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 03/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<resources>
+    <style name="SplashScreenTextStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">@dimen/font48</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/koulen_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="OnboardTextStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">@dimen/font48</item>
+        <item name="android:textColor">@color/base</item>
+        <item name="android:fontFamily">@font/koulen_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescOnboardTextStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">@dimen/font22</item>
+        <item name="android:textColor">#B3091503</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NavStyle">
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:textSize">@dimen/font18</item>
+        <item name="android:textColor">@color/base</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitleImageStyle">
+        <item name="android:textSize">@dimen/font24</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescImageStyle">
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AuthorMusicStyle">
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:textColor">#B3FFFFFF</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NameFriendStyle">
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:textColor">@color/base</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UsernameFriendStyle">
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:textColor">#80091503</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescProfileStyle">
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:textColor">#BFFFFFFF</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="VersionStyle">
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:textColor">#BFFFFFFF</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+    </style>
+
+    <style name="DialogTitleStyle">
+        <item name="android:textSize">@dimen/font16</item>
+        <item name="android:textColor">@color/base</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescHomeStyle">
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+    </style>
+
+    <style name="NameHomeStyle">
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:textColor">#B3091503</item>
+        <item name="android:fontFamily">@font/radiocanada_regular</item>
+    </style>
+</resources>

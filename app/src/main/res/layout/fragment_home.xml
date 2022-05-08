@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 08/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:layout_marginTop="@dimen/dimen18"
+    android:layout_marginBottom="@dimen/dimen80">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_home_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen18"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:layout_marginLeft="@dimen/dimen18"
+            android:layout_marginStart="@dimen/dimen18"
+            android:padding="@dimen/dimen10"
+
+            android:background="@drawable/shape_bg_profile">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_image"
+                android:layout_width="@dimen/dimen64"
+                android:layout_height="@dimen/dimen64"
+                android:src="@drawable/img_profile"/>
+
+            <TextView
+                android:id="@+id/name_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/circle_image"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingStart="@dimen/dimen10"
+                android:text="@string/dea"
+                style="@style/DescImageStyle"/>
+
+            <TextView
+                android:layout_below="@+id/name_home"
+                android:layout_toRightOf="@id/circle_image"
+                android:paddingStart="@dimen/dimen10"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingTop="@dimen/dimen5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_dea"
+                style="@style/DescHomeStyle"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_interest"
+            android:layout_below="@id/top_home_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_profile"
+            android:padding="@dimen/dimen18"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen18"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:layout_marginLeft="@dimen/dimen18"
+            android:layout_marginStart="@dimen/dimen18"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

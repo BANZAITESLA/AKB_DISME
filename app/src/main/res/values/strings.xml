@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- 03/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+    <string name="app_name">DisMe</string>
+    <string name="home">Home</string>
+    <string name="daily_activity">Daily Activity</string>
+    <string name="friend_list">Friend List</string>
+    <string name="gallery">Gallery</string>
+    <string name="music_video">Music &amp; Video</string>
+    <string name="music_title">Music Favorite</string>
+    <string name="video_title">Video</string>
+    <string name="profile">Profile</string>
+    <string name="dea">Dea Inesia Sri Utami</string>
+    <string name="desc_dea">Hooman with good study energy and also have full sleep - and - eat - all - day energy. Interest in code world, but haven\'t mastering any.</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiZGVhMTAiLCJhIjoiY2tzOWFwdnlxMHNyaTMxcGU5NnBnaWhtNCJ9.m9atsKQbdp-Vg5a5DMPlMw</string>
+    <string name="find_me">Find Me</string>
+    <string name="version">App Version</string>
+    <string name="interest">Interest</string>
+    <string name="desc_app_1">DisMe is an application that shows more about Myself haha</string>
+    <string name="desc_app_2">All information shown in this app is mean that it is safe to share in public.</string>
+    <string name="desc_app_3">Oh No! There is no connection to some information.. because.. The fake information was intended to keep personal information away. \n\nHowever, I guarantee that this application still meets the TODO.</string>
+</resources>

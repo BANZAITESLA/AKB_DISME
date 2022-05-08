@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 04/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyActivityFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen18"
+        android:layout_marginBottom="@dimen/dimen80"
+        android:paddingStart="@dimen/dimen18"
+        android:paddingLeft="@dimen/dimen18">
+
+        <TextView
+            android:id="@+id/title_daily_activity"
+            style="@style/TitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:layout_marginRight="@dimen/dimen18"
+            android:text="@string/daily_activity" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_view_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:layout_marginRight="@dimen/dimen18"
+            android:layout_below="@id/title_daily_activity" />
+
+        <TextView
+            android:id="@+id/title_friend_list"
+            style="@style/TitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_view_daily"
+            android:layout_marginTop="@dimen/dimen18"
+            android:layout_marginEnd="@dimen/dimen18"
+            android:layout_marginRight="@dimen/dimen18"
+            android:text="@string/friend_list" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/horizontal_view_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_friend_list"
+            android:background="@drawable/layout_friend_list"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dimen20"
+            android:paddingLeft="@dimen/dimen20"
+            android:paddingTop="@dimen/dimen20"
+            android:scrollbars="horizontal" />
+    </RelativeLayout>
+
+</FrameLayout>
