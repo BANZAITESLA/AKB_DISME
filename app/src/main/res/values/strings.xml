@@ -17,7 +17,5 @@
     <string name="find_me">Find Me</string>
     <string name="version">App Version</string>
     <string name="interest">Interest</string>
-    <string name="desc_app_1">DisMe is an application that shows more about Myself haha</string>
-    <string name="desc_app_2">All information shown in this app is mean that it is safe to share in public.</string>
-    <string name="desc_app_3">Oh No! There is no connection to some information.. because.. The fake information was intended to keep personal information away. \n\nHowever, I guarantee that this application still meets the TODO.</string>
+    <string name="finish">Finish</string>
 </resources>

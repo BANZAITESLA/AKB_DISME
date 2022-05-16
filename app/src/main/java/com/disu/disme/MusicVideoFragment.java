@@ -5,7 +5,6 @@ import static com.disu.disme.AppDatabase.MIGRATION_2_3;
 import static com.disu.disme.AppDatabase.MIGRATION_3_4;
 
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

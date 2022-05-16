@@ -24,6 +24,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.disu.disme'
 }
 
 dependencies {
@@ -46,5 +47,4 @@ dependencies {
     }
     implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v9:0.9.0'
     implementation 'com.google.android.gms:play-services-location:19.0.1'
-    implementation 'com.tbuonomo:dotsindicator:4.3'
 }

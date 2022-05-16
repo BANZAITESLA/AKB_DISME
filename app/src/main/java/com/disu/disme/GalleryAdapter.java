@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,11 +46,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
         Picasso.with(context).load(id).into(holder.imageGallery, new Callback() {
             @Override
             public void onSuccess() {
+                holder.progressBar.setVisibility(View.GONE);
                 if (playAnimation.get()) {
-                    Animation ltor = new TranslateAnimation(holder.imageGallery.getWidth(), 0, 0.0f, 0.0f);
-                    ltor.setDuration(450);
-                    ltor.setFillAfter(true);
-                    holder.imageGallery.startAnimation(ltor);
+                    Animation fadeOutTitle = new AlphaAnimation(0, 1);
+                    fadeOutTitle.setInterpolator(new AccelerateInterpolator());
+                    fadeOutTitle.setDuration(1000);
+                    holder.imageGallery.startAnimation(fadeOutTitle);
                 }
             }
 
@@ -68,10 +69,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public GridViewItem imageGallery;
+        public ProgressBar progressBar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageGallery = itemView.findViewById(R.id.grid_view);
+            progressBar = itemView.findViewById(R.id.progressbar);
         }
     }
 }

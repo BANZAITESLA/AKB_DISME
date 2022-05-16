@@ -8,35 +8,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OnboardingActivity"
-    android:background="@color/white"
-    android:padding="@dimen/dimen18">
+    android:background="@color/white">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <Button
-        android:id="@+id/button_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_alignParentBottom="true"
-        android:text="Selesai"
-        android:background="@drawable/shape_title"
-        android:elevation="@dimen/dimen5"
-        android:visibility="invisible"
-        style="@style/DescImageStyle"
-        android:textAllCaps="false"/>
+        android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:id="@+id/indicator_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/dimen50"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true">
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            app:tabBackground="@drawable/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabIndicatorHeight="0dp"/>
+
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finish"
+            android:background="@drawable/shape_title"
+            android:elevation="@dimen/dimen5"
+            android:visibility="invisible"
+            style="@style/DescImageStyle"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/dimen18"/>
 
     </LinearLayout>
 

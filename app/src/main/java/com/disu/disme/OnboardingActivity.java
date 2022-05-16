@@ -1,19 +1,27 @@
 package com.disu.disme;
 
-import androidx.annotation.RequiresApi;
+import static com.disu.disme.AppDatabase.MIGRATION_1_2;
+import static com.disu.disme.AppDatabase.MIGRATION_2_3;
+import static com.disu.disme.AppDatabase.MIGRATION_3_4;
+import static com.disu.disme.AppDatabase.MIGRATION_4_5;
+import static com.disu.disme.AppDatabase.MIGRATION_5_6;
+import static com.disu.disme.AppDatabase.MIGRATION_6_7;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 import androidx.viewpager.widget.ViewPager;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Build;
-import android.os.Bundle;
-import android.text.Html;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.List;
 
 /**
  * 09/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6
@@ -22,53 +30,56 @@ import android.widget.TextView;
 public class OnboardingActivity extends AppCompatActivity {
 
     ViewPager viewPager;
-    LinearLayout linearLayout;
-    Button next;
+    TabLayout tabLayout;
+    Button finish;
+    Animation finish_up;
+    Animation finish_down;
 
-    TextView[] dots;
     OnboardingAdapter viewPagerAdapter;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_onboarding);
 
-        next = (Button) findViewById(R.id.button_right);
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "disme")
+                .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7)
+                .allowMainThreadQueries()
+                .build();
 
+        db.onboardingDao().insertAll(new OnboardingData(1, "What is DisMe?", "DisMe is an application that shows more about Myself haha", "img_onboard_1"));
+        db.onboardingDao().insertAll(new OnboardingData(2, "How about the Data in DisMe?", "All information shown in this app is safe to share in public. Its means, that some are fake to keep personal data safe.", "img_onboard_2"));
+        db.onboardingDao().insertAll(new OnboardingData(3, "Message from the creator,", "DisMe contains so much data stored in your cache. Some features need your permission to meet their requirements. I guarantee all is safe.. so enjoy!", "img_onboard_3"));
 
-        next.setOnClickListener(new View.OnClickListener() {
+        List<OnboardingData> screen_item = db.onboardingDao().getAllData();
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        tabLayout = (TabLayout) findViewById(R.id.tablayout);
+        viewPagerAdapter = new OnboardingAdapter(this, screen_item);
+
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+        viewPager.addOnPageChangeListener(viewListener);
+
+        finish = (Button) findViewById(R.id.button_right);
+        finish_up = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
+        finish_down = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
+
+        finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                prevData();
                 Intent i = new Intent(OnboardingActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
             }
         });
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        linearLayout = (LinearLayout) findViewById(R.id.indicator_layout);
-        viewPagerAdapter = new OnboardingAdapter(this);
-
-        viewPager.setAdapter(viewPagerAdapter);
-        setUpIndicator(0);
-        viewPager.addOnPageChangeListener(viewListener);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    public void setUpIndicator(int position) {
-        dots = new TextView[3];
-        linearLayout.removeAllViews();
-
-        for (int i = 0; i < dots.length; i++) {
-            dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226"));
-            dots[i].setTextSize(35);
-            dots[i].setTextColor(getResources().getColor(R.color.base45, getApplicationContext().getTheme()));
-            linearLayout.addView(dots[i]);
+        if (restorePrevData()) {
+            Intent i = new Intent(OnboardingActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
         }
-
-        dots[position].setTextColor(getResources().getColor(R.color.base, getApplicationContext().getTheme()));
     }
 
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
@@ -77,15 +88,15 @@ public class OnboardingActivity extends AppCompatActivity {
 
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onPageSelected(int position) {
-            setUpIndicator(position);
 
             if (position == 2) {
-                next.setVisibility(View.VISIBLE);
+                finish.setAnimation(finish_up);
+                finish.setVisibility(View.VISIBLE);
             } else {
-                next.setVisibility(View.GONE);
+                finish.setAnimation(finish_down);
+                finish.setVisibility(View.INVISIBLE);
             }
         }
 
@@ -95,7 +106,16 @@ public class OnboardingActivity extends AppCompatActivity {
         }
     };
 
-    private int getItem(int i) {
-        return viewPager.getCurrentItem();
+    private void prevData() {
+        SharedPreferences prev = getApplicationContext().getSharedPreferences("prev", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prev.edit();
+        editor.putBoolean("opened",true);
+        editor.commit();
+    }
+
+    private boolean restorePrevData() {
+        SharedPreferences prev = getApplicationContext().getSharedPreferences("prev", MODE_PRIVATE);
+        Boolean opened = prev.getBoolean("opened", false);
+        return opened;
     }
 }

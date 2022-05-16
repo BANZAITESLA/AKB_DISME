@@ -2,9 +2,10 @@ package com.disu.disme;
 
 import static com.disu.disme.AppDatabase.MIGRATION_1_2;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,15 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
-import android.provider.MediaStore;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.List;
 
 /** 04/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 */
@@ -51,9 +43,9 @@ public class DailyActivityFragment extends Fragment {
         db.dailyActivityDao().insertAll(new DailyActivityData(2, "img_daily_activity_2","Kang Ganggu", "digangguin mulu makhluk berbulu"));
         db.dailyActivityDao().insertAll(new DailyActivityData(3, "img_daily_activity_3","Study with me!", "study, rain, music on, andd hot chocolate!!! :)"));
 
-        db.friendListDao().insertAll(new FriendListData(1, "img_friend_list_1","Irene", "@IreneRV"));
-        db.friendListDao().insertAll(new FriendListData(2, "img_friend_list_2","Oikawa Tooru", "@OikawaChan"));
-        db.friendListDao().insertAll(new FriendListData(3, "img_friend_list_3","Young K", "@krisis_identitas"));
+        db.friendListDao().insertAll(new FriendListData(1, "img_friend_list_1","Abu Fernando Malinowski", "@akukabur"));
+        db.friendListDao().insertAll(new FriendListData(2, "img_friend_list_2","Abu Naum", "@Ilovesleep"));
+        db.friendListDao().insertAll(new FriendListData(3, "img_friend_list_3","Lily Fernanda Malinowski", "@MommyLily"));
 
         List<DailyActivityData> daily_activity = db.dailyActivityDao().getAllData();
         List<FriendListData> friend_list = db.friendListDao().getAllData();

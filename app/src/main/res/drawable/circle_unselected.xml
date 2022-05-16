@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 15/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="ring"
+            android:innerRadius="0dp"
+            android:thickness="@dimen/dimen5"
+            android:useLevel="false">
+            <solid android:color="#66091503"/>
+        </shape>
+    </item>
+</layer-list>

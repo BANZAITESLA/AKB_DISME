@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 15/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6 -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/circle_selected"
+        android:state_selected="true" />
+
+    <item android:drawable="@drawable/circle_unselected"/>
+</selector>

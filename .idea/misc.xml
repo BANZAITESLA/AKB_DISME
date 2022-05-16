@@ -3,18 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1255" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/border_list.xml" value="0.139" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/circle_selected.xml" value="0.1265" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/circle_unselected.xml" value="0.1265" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/dialog.xml" value="0.1365" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_add.xml" value="0.1365" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_arrow_left_solid.xml" value="0.124" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_arrow_right_solid.xml" value="0.124" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_call.xml" value="0.1365" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_circle_selected.xml" value="0.1265" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_circle_unselected.xml" value="0.1265" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_daily_activity.xml" value="0.1255" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_github.xml" value="0.1365" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_house_profile.xml" value="0.101" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_house_solid.xml" value="0.1255" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_loc.xml" value="0.1365" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_mail.xml" value="0.1365" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_music_video.xml" value="0.1255" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_play.xml" value="0.1255" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_shield_heart_solid.xml" value="0.124" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_stop.xml" value="0.1255" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/ic_user_solid.xml" value="0.1255" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/icon_music.xml" value="0.1" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/indicator.xml" value="0.1265" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/layout_friend_list.xml" value="0.139" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/shadow_list.xml" value="0.139" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/drawable/shadow_media.xml" value="0.121" />
@@ -48,6 +60,7 @@
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/fragment_music_video.xml" value="0.14666666666666667" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/friend_list_row.xml" value="0.17552083333333332" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/gallery_dialog.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/gallery_row.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/home_row.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/maps.xml" value="0.17552083333333332" />
@@ -56,6 +69,7 @@
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/onboard_1.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/onboard_2.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/onboard_3.xml" value="0.17552083333333332" />
+        <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/onboard_row.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/tambah_daily_activity.xml" value="0.125" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/layout/video_row.xml" value="0.17552083333333332" />
         <entry key="..\:/GoogleDrive/Document/SMT6/Aplikasi Komputasi Bergerak/Project/DisMe/app/src/main/res/menu/bottom_nav.xml" value="0.17552083333333332" />

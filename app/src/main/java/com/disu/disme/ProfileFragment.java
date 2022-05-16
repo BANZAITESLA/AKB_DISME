@@ -18,13 +18,7 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,11 +39,12 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
-import com.mapbox.mapboxsdk.plugins.annotation.Line;
 import com.mapbox.mapboxsdk.plugins.annotation.SymbolManager;
 import com.mapbox.mapboxsdk.plugins.annotation.SymbolOptions;
 import com.mapbox.mapboxsdk.utils.BitmapUtils;
@@ -70,6 +65,8 @@ public class ProfileFragment extends Fragment implements OnMapReadyCallback {
     private static final int REQUEST_CALL = 1;
     private static final int REQUEST_MAP = 2;
     private LocationRequest locationRequest;
+
+    SecretData user = new SecretData();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -123,7 +120,7 @@ public class ProfileFragment extends Fragment implements OnMapReadyCallback {
         if (checkPermissions()) {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            callIntent.setData(Uri.parse("tel:" + "085156387634"));
+            callIntent.setData(Uri.parse("tel:" + user.getHp()));
             getActivity().startActivity(callIntent);
         } else {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
@@ -242,8 +239,8 @@ public class ProfileFragment extends Fragment implements OnMapReadyCallback {
 
                             double sourceLatitude = locationResult.getLocations().get(index).getLatitude();
                             double sourceLongitude = locationResult.getLocations().get(index).getLongitude();
-                            double destinationLatitude = -6.755484;
-                            double destinationLongitude = 107.010402;
+                            double destinationLatitude = user.getLat();
+                            double destinationLongitude = user.getLoc_long();
 
                             Intent map = new Intent(Intent.ACTION_VIEW);
                             map.setData(Uri.parse("http://maps.google.com/maps?saddr=" + sourceLatitude + "," + sourceLongitude + "&daddr=" + destinationLatitude + "," + destinationLongitude));
@@ -310,6 +307,12 @@ public class ProfileFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(@NonNull MapboxMap mapboxMap) {
 
+        CameraPosition position = new CameraPosition.Builder()
+                .target(new LatLng(user.getLat(), user.getLoc_long()))
+                .zoom(9)
+                .build();
+        mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(position));
+
         mapboxMap.setStyle(Style.MAPBOX_STREETS, new com.mapbox.mapboxsdk.maps.Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull com.mapbox.mapboxsdk.maps.Style style) {
@@ -322,7 +325,7 @@ public class ProfileFragment extends Fragment implements OnMapReadyCallback {
                         true);
 
                 SymbolOptions symbolOptions = new SymbolOptions()
-                        .withLatLng(new LatLng(-6.755484, 107.010402))
+                        .withLatLng(new LatLng(user.getLat(), user.getLoc_long()))
                         .withIconImage(ID_ICON_AIRPORT)
                         .withIconSize(2.0f)
                         .withIconColor(ColorUtils.colorToRgbaString(Color.rgb(82,91,78)))

@@ -1,23 +1,15 @@
 package com.disu.disme;
 
-import androidx.annotation.NonNull;
 import androidx.room.Database;
-import androidx.room.DatabaseConfiguration;
-import androidx.room.InvalidationTracker;
-import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverters;
 import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
-
-import java.util.List;
 
 /**
  * 05/05/2022 | 10119239 | DEA INESIA SRI UTAMI | IF6
  */
 
-@Database(entities = {DailyActivityData.class, FriendListData.class, MusicData.class, VideoData.class, GalleryData.class, HomeData.class}, version = 6)
+@Database(entities = {DailyActivityData.class, FriendListData.class, MusicData.class, VideoData.class, GalleryData.class, HomeData.class, OnboardingData.class}, version = 7)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract DailyActivityDao dailyActivityDao();
     public abstract FriendListDao friendListDao();
@@ -25,6 +17,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract VideoDao videoDao();
     public abstract GalleryDao galleryDao();
     public abstract HomeDao homeDao();
+    public abstract OnboardingDao onboardingDao();
 
     static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
@@ -71,6 +64,16 @@ public abstract class AppDatabase extends RoomDatabase {
                     "CREATE TABLE IF NOT EXISTS home_table (id INTEGER NOT NULL, image TEXT, name TEXT, desc_int TEXT, PRIMARY KEY(id))");
             database.execSQL(
                     "INSERT or REPLACE INTO home_table (id, image, name, desc_int) SELECT id, image, name, desc_int FROM home_table");
+        }
+    };
+
+    static final Migration MIGRATION_6_7 = new Migration(6, 7) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL(
+                    "CREATE TABLE IF NOT EXISTS onboarding_table (id INTEGER NOT NULL, title TEXT, desc_onboarding TEXT, image TEXT, PRIMARY KEY(id))");
+            database.execSQL(
+                    "INSERT or REPLACE INTO onboarding_table (id, title, desc_onboarding, image) SELECT id, title, desc_onboarding, image FROM onboarding_table");
         }
     };
 }

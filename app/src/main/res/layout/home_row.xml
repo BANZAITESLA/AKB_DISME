@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="@dimen/dimen10"
-            android:background="#A6091503">
+            android:background="@color/base65">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circle_interest"

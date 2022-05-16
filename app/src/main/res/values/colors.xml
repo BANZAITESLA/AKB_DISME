@@ -8,12 +8,19 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
     <color name="black">#FF000000</color>
+    <color name="black30">#4D000000</color>
+
     <color name="white">#FFFFFFFF</color>
+    <color name="white75">#BFFFFFFF</color>
 
     <color name="base">#091503</color>
+    <color name="base70">#B3091503</color>
+    <color name="base65">#A6091503</color>
     <color name="base45">#73091503</color>
-    <color name="purple_base">#d9c3f4</color>
-    <color name="yellow_base">#fbed39</color>
+
+    <color name="basealt">#525B4E</color>
+
     <color name="transparent">#00000000</color>
 </resources>
